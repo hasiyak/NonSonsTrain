@@ -109,3 +109,25 @@ setInterval(() => {
     // Apply the new background image
     bgContainer.style.backgroundImage = bgImages[currentImageIndex];
 }, 3000);
+
+// --- PASSWORD SHOW/HIDE TOGGLE LOGIC ---
+
+// 1. Grab the password input and the eye icon elements
+const passwordField = document.getElementById('password');
+const togglePasswordBtn = document.getElementById('toggle-password');
+
+// 2. Listen for a click on the eye icon
+togglePasswordBtn.addEventListener('click', function() {
+    // Check what type the field currently is
+    const currentType = passwordField.getAttribute('type');
+    
+    if (currentType === 'password') {
+        // Switch to text mode to show the password
+        passwordField.setAttribute('type', 'text');
+        togglePasswordBtn.textContent = '⦵'; // Changes the icon to a "hidden" state if you like
+    } else {
+        // Switch back to password mode to hide it
+        passwordField.setAttribute('type', 'password');
+        togglePasswordBtn.textContent = '👁'; // Reset back to the open eye
+    }
+});

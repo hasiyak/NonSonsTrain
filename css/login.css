@@ -24,7 +24,7 @@
       margin: 0;
       padding: 0;
       font-family: var(--font-main);    
-    }
+}
 
 /*full screen */
 .screen-container {
@@ -37,7 +37,7 @@
       background-repeat: no-repeat;
       /*image animation*/
       transition: background-image 1s ease-in-out;
-    }
+}
 
 /*left side */
 .left-side{
@@ -59,8 +59,8 @@
 .left-side p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9); /* Makes the white text a bit softer to read */
-    max-width: 500px;      /* Restricts width so the sentence splits cleanly into two lines */
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 500px;
 }
 
 /*right side*/
@@ -76,7 +76,7 @@
         var(--primary-dark) 0%,
         var(--dark) 100%
     );
-    }
+}
 
 /*login card*/
 .login-card {
@@ -96,40 +96,78 @@
 
 .login-card:hover {
     transform: scale(1.02);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Expands and softens the shadow */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
+/*small sentence*/
 .subtitle{
     color: #6c757d;
     margin-bottom: 25px;
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"]
+ {
     width: 100%;
     padding: 12px;
     margin-top: 6px;
     margin-bottom: 18px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    box-sizing: border-box; /* Ensures padding doesn't break the width */
+    box-sizing: border-box;
 }
+
 label[for="email"], 
 label[for="password"] {
     font-weight: bold;
 }
 
+/*password*/
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+    width: 100%;
+    padding-right: 45px;
+    margin-bottom: 0;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #64748b;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.eye-icon:hover {
+    color: #0284c7;
+}
+
+.password-wrapper {
+    margin-top: 6px;
+    margin-bottom: 18px;
+}
+
 .error-text {
-    color: #d9534f; /* A standard alert red */
+    color: #d9534f;
     font-size: 13px;
-    margin-top: -15px; /* Pulls it up slightly closer to the input box */
+    margin-top: -15px;
     margin-bottom: 15px;
-    display: none; /* Hidden by default */
+    display: none;
 }
 
 .form-foot {
     display: flex;
-    justify-content: space-between; /* Pushes the left group and right link apart */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-top: 10px;
@@ -139,31 +177,32 @@ label[for="password"] {
 .remember {
     display: flex;
     align-items: center;
-    gap: 6px; /* Adds a small gap between the little square and the words "Remember me" */
+    gap: 6px;
 }
 
 button[type="submit"] {
-    width: 100%;             /* Makes the button span horizontally across the whole card */
-    padding: 16px;           /* Makes the button tall and clickable */
-    background-color: #0284c7; /* A bright, professional blue */
-    color: white;            /* Ensures the text is readable */
-    border: none;            /* Removes default browser borders */
-    border-radius: 6px;      /* Softens the corners to match the inputs */
-    font-size: 18px;         /* Makes the "Sign In" text bigger */
+    width: 100%;
+    padding: 16px;
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
     font-weight: bold;
-    cursor: pointer;         /* Changes the mouse to a hand icon on hover */
-    margin-top: 15px;        /* Adds breathing room above the button */
-    transition: background-color 0.2s ease; /* Smooth animation for the hover effect */
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s ease;
 }
 
 button[type="submit"]:hover {
     background-color: #004c99; 
 }
 
+/*fix links*/
 .login-card a {
-    color: #0066cc;         /* Matches the blue of your Sign In button */
-    text-decoration: none;  /* Removes the default ugly browser underline */
-    font-weight: 500;       /* Makes the text slightly bolder so it stands out */
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
     transition: color 0.2s ease; 
 }
 
@@ -172,13 +211,11 @@ button[type="submit"]:hover {
     text-align: center;
 }
 
-
-/* Optional: Adds an underline and darkens the blue slightly when you hover over the links */
 .login-card a:hover {
-    color: #004c99;         /* Matches the darker blue hover state of your button */
+    color: #004c99;
 }
-/* dumriya logo */
 
+/* dumriya logo */
 .logo{
     display: inline-flex;
     align-items: center;
@@ -198,7 +235,6 @@ button[type="submit"]:hover {
 }
 
 /* toast container */
-
 #toast-container {
     position: fixed;
     top: 25px;
@@ -206,7 +242,7 @@ button[type="submit"]:hover {
     z-index: 9999;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Spacing if multiple toasts pop up at once */
+    gap: 15px;
 }
 
 .toast {
@@ -220,28 +256,22 @@ button[type="submit"]:hover {
     gap: 12px;
     font-size: 15px;
     font-weight: 600;
-    
-    /* Animation setup: Starts off-screen to the right */
     transform: translateX(150%);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy slide-in effect */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* When this class is added by JS, it slides into view */
 .toast.show {
     transform: translateX(0);
 }
 
-/* Specific styling for Errors (Red) */
 .toast.error {
-    border-left: 6px solid #ef4444; /* The red strip on the left */
+    border-left: 6px solid #ef4444;
 }
 
-/* Specific styling for Success (Green) */
 .toast.success {
     border-left: 6px solid #10b981; 
 }
 
-/* The little circular icons */
 .toast-icon {
     display: inline-flex;
     justify-content: center;

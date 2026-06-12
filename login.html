@@ -3,11 +3,11 @@
 <head>
     <title>Login | දුම්රිය</title>
     <link rel="stylesheet" href="css/login.css">
-    </head>
+</head>
 <body>
     <div class="screen-container">
         <div class="left-side">
-            <a href="index.html" class="logo" id="logo-name">
+            <a href="index.html" class="logo" id="logo-name" width="50px">
                 <img src="assets/train-whit.png" alt="logo" class="train-logo">
                 <img src="assets/Dumriya_Icon-yellow.png" alt="Dumriya logo" class="text-logo">
             </a>
@@ -16,20 +16,23 @@
         </div>
         
         <div class="right-side">
-            <div class="login-card">
+            <div class="login-card"> //form box
                 <h2>Welcome Back!</h2>
                 <p class="subtitle">Please enter your details to sign into your account</p>
 
                 <form id="login-form" autocomplete="off">
-                    
+                    //email
                     <label for="email">Email Address</label><br>
                     <input type="email" id="email" name="email" placeholder="name@example.com"><br>
                     
                     <span id="email-error" class="error-text">enter a valid email</span><br>
-              
+                    //password
                     <label for="password">Password</label><br>
-                    <input type="password" id="password" name="password" placeholder="enter password here" autocomplete="new-password"><br>
-                    
+                    <div class="password-wrapper">
+                    <input type="password" id="password" name="password" placeholder="enter password here" autocomplete="new-password">
+                    <span id="toggle-password" class="eye-icon">👁</span>
+                    </div>
+                    //rememberme
                     <div class="form-foot">
                         <div class="remember">
                             <input type="checkbox" id="remember" name="remember">
@@ -41,15 +44,15 @@
                     <button type="submit">Sign In</button>
                 </form>
 
-                <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+                <p>Don't have an account?<a href="register.html">Sign Up</a></p>
                 <p class="backHome"><a href="index.html">Back to Home</a></p>
             </div>
         </div>
     </div>
 
-    <div id="toast-container"></div>
+    <div id="toast-container"></div> //notifi
 
-    <script src="js/login.js"></script>
+    <script src="js/login.js"></script> //js connect
 
 </body>
 </html>
