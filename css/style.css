@@ -90,12 +90,13 @@ header.scrolled{
 .nav-links{
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     display: flex;
     gap: 30px;
 }
 
 .nav-links li a{
+    padding-top: 18px ;
     text-decoration: none;
     color: #fff;
     font-weight: 500;
@@ -154,7 +155,7 @@ header.scrolled{
 .nav-buttons .btn-register:hover{
     background: #0077b3;
     color: #fff;
-<<<<<<< HEAD
+
 }   
 
 .titleBox{
