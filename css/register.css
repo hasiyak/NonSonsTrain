@@ -27,6 +27,10 @@
     display: flex;
     width: 60%;
     height: 100vh;
+    background: linear-gradient(
+        var(--gray),
+        var(--),
+    );
 }
 
 .rightBox{

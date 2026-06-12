@@ -3,10 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Booking | දුම්රිය  </title>
     <link rel="stylesheet" href="css/style.css">
+=======
+    <title>Book Tickets | LankaTrains</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .search-result-container{
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            padding: 40px 50px;
+        }
+
+        .filter-sidebar{
+            background-color: var(--light);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow:var(--shadow);
+            height: fit-content;
+        }
+
+        .filter-sidebar h2{
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light);
+            color: var(--darker);
+        }
+
+        .filter-group{
+            margin-bottom: 20px;
+        }
+
+        .filter-group label.criteria-label{
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+       
+
+        .btn-primary{
+            width:100%;
+            padding:12px;
+            background-color: var(--primary-dark);
+            color: var(--light);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover{
+            background-color: var(--primary);
+        }
+
+        .train-card{
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            border-left: 5px solid var(--primary);
+        }
+
+        .train-route{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .train-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .train-info h3 {
+            color: var(--darker);
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .time {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 18px;
+        }
+
+        .train-features{
+             display: inline-block;
+            background: #f1f5f9;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-right: 10px;
+            color: var(--dark);
+        }
+
+         .train-action {
+            text-align: right;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .btn-secondary{
+            padding: 10px 20px;
+            background-color:var(--secondary);
+            color:;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover{
+            background-color: var(--secondary-hover);
+            transform: translateY(-2px);
+            
+        }
+        
+       
+       
+
+
+
+        
+    </style>
+>>>>>>> a325fb3150787832e0204944681db4c25c6c08a7
 </head>
 <body>
+<<<<<<< HEAD
+    <header>
+        <nav>
+            <a href="index.html" class="logo">LankaTrains</a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Tickets</a></li>
+                <li><a href="schedules.html">Schedules</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="loginReg">
+                <button>login</button>
+                <button>Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="main-container">
+
+            <div class="search-result-container">
+
+                <aside class="filter-sidebar">
+                    <h2>Filters</h2>
+                    <div class="filter-group">
+                        <label class="criteria-label">Train Type</label>
+                        <div>
+                            <input type="checkbox" id="intercity" value="intercity">
+                            <label for="intercity">Intercity Express</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="nightmail" id="nightmail" value="nightmail">
+                            <label for="nightmail">Night Mail</label>   
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="criteria-label">Class</label>
+                        <div>
+                            <input type="checkbox" id="First-class" value="first-class">
+                            <label for="first-class">First Class</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="second-class" value="second-class">
+                            <label for="second-class">Second Class</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="third-class" value="third-class">
+                            <label for="third-class">Third Class</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="criteria-label">Departure time</label>
+                        <select>
+                            <option value="any">Any Time</option>
+                            <option value="morning">Morning (06:00 -12:00)</option>
+                            <option value="afternoon">Afternoon (12:00 - 18:00)</option>
+                            <option value="evening">Evening (18:00 - 00:00)</option>
+
+                        </select>
+                    </div>
+                    <button class="btn-primary">Apply Filters</button>
+                </aside>
+                
+                <div class="results-list">
+                    <div class="train-card" data-type="intercity" data-class="first second" data-time="morning">
+                        <div class="train-info">
+                            <h3>Udarata Menike (1015)</h3>
+                            <div class="train-route">
+                                <div>
+                                    <span class="time">05:55 AM</span>
+                                    <br>
+                                    <small>Colombo Fort</small>
+                                </div>
+                                <div style="flex-grow: 1; text-align: center;">
+                                    <large>&rarr;</large>
+                                    <br>
+                                    <small>9h 20m</small>
+                                </div>
+                                <div>
+                                    <span class="time">03:15 PM</span>
+                                    
+                                    <br>
+                                    <small>Ella</small>
+                                </div>
+                            </div>
+                            <div class="train-features">
+                                <span> A/C Available</span>
+                                <span> | Buffet Car</span>
+                            </div>
+                        </div>
+                        <div class="train-action">
+                            <span class="price">LKR 450</span>
+                            <button class="btn-secondary">Select Seats</button>
+                        </div>
+                    </div>
+
+                    <div class="train-card" style="transition-delay: 0.1s;" data-type="intercity" data-class="second third" data-time="morning">
+                        <div class="train-info">
+                            <h3>Podi Menike (1005)</h3>
+                            <div class="train-route">
+                                <div>
+                                    <span class="time">08:30 AM</span><br>
+                                    <small>Colombo Fort</small>
+                                </div>
+                                <div style="flex-grow: 1; text-align: center;">
+                                    <large>&rarr;</large>
+                                    <br>
+                                    <small>9h 30m</small>
+                                </div>
+                                <div>
+                                    <span class="time">05:40 PM</span><br>
+                                    <small>Ella</small>
+                                </div>
+                            </div>
+                            <div class="train-features">
+                                <span>  Observation Saloon</span>
+                            </div>
+                        </div>
+                        <div class="train-action">
+                            <span class="price">LKR 550</span>
+                            <button class="btn-secondary">Select Seats</button>
+                        </div>
+                    </div>
+
+                    <div class="train-card" style="transition-delay: 0.2s;" data-type="nightmail" data-class="first second third" data-time="night">
+                        <div class="train-info">
+                            <h3>Night Mail (1045)</h3>
+                            <div class="train-route">
+                                <div>
+                                    <span class="time">08:00 PM</span><br>
+                                    <small>Colombo Fort</small>
+                                </div>
+                                <div style="flex-grow: 1; text-align: center;">
+                                    <large>&rarr;</large>
+                                    <br>
+                                    <small>10h 30m</small>
+                                </div>
+                                <div>
+                                    <span class="time">06:30 AM</span><br>
+                                    <small>Ella</small>
+                                </div>
+                            </div>
+                            <div class="train-features">
+                                <span>Sleeping Berths</span>
+                            </div>
+                        </div>
+                        <div class="train-action">
+                            <span class="price">LKR 700</span>
+                            <button class="btn-secondary">Select Seats</button>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+=======
 
     <!--Navigation-->
     <header>
@@ -62,5 +364,6 @@
             </div>
     </footer>
     <script src="js/main.js"></script>
+>>>>>>> c5abad68689f303740d12442f87a956f93eef6de
 </body>
 </html>
