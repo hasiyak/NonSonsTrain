@@ -51,7 +51,7 @@ body {
 
 .search_block {
     background: rgba(70, 69, 69, 0.726);
-    border: 2px solid rgb(12, 12, 12);
+    border: 2px solid rgb(12, 12, 12, 0.01);
     border-radius : 15px;
 }/*        
     backdrop-filter: blur(15px);          
