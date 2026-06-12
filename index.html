@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSTrainz | Book Sri Lanka Train Tickets online</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 <!--Navigation-->
-    <header> 
+      <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <i class="logo-name">
-                    NS<span>Trainz</span>
-                </i>    
+            <a href="index.html" class="logo" id="logo-name">
+                <img src="assets/train-whit.png" alt="logo" class="train-logo">
+                <i></i><img src="assets/Dumriya_Icon-yellow.png" alt="Dumriya logo">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -31,12 +31,58 @@
             </div>
         </div>
     </header>
+<section class = "context">
+    <div class = "context_content">
+        <h1 class = "context_title">Your Journey Begins Here</h1>
+        <p class = "context_para">Discover the beauty of Sri Lanka by rail. Fast,secure and hassle-freeonline train ticket booking</p>
 
+        <div class = "search_block">
+            <form action="booking.html" class="form_search">
+
+                <div class = "input_group">
+                    <label for="From">From</label>
+                    <select name="From" id="From">
+                        <option value="Badulla">Badulla</option>
+                        <option value="Ella">Ella</option>
+                        <option value="Kandy">Kandy</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="ColomboFort">Colombo Fort
+                        </option>  
+                    </select>
+                </div>
+                <div class = "input_group">
+                    <label for="To">To</label>
+                    <select name="To" id="To">
+                        <option value="Badulla">Badulla</option>
+                        <option value="Ella">Ella</option>
+                        <option value="Kandy">Kandy</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="ColomboFort">Colombo Fort
+                        </option>
+                    </select>
+                </div>
+                <div class = "input_group input_date">
+                    <label for="Date">Date</label>
+                    <input type="date" id="Date" name ="Date">
+                </div>
+                <div class = "input_group" id="passenger-div">
+                    <label for="Passengers">Passengers</label>
+                    <input type="number" id = "Passengers" name = "Passengers">
+                </div>
+                <button type = "search" class="search_button" id="search-btn">Search</button>
+
+            </form>
+        </div>
+    </div>
+</section>
 <!--Footer-->
     <footer>
         <div class="container">
-            <div class="footer-col">
-                <h3><i class="logo-name">NS</i><span>Trainz</span></h3>
+            <div class="footer-logo">
+                <img src="assets/train-whit.png" alt="logo">
+                <img src="assets/dumriya_font.png">
                 <p>Your premium online train ticket booking partner for a comfortable and memorable journey across Sri Lanka.</p>
             </div>
                 <div class="footer-content">
@@ -62,6 +108,8 @@
                 <p>Copyright &copy; 2026 NSTrainz. All rights reserved.</p>
             </div>
     </footer>
+
+    <script src="js/main.js"></script>
   
 </body>
 
