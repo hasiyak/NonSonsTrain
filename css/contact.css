@@ -1,0 +1,107 @@
+/* Basic Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header Section */
+.header {
+    background-color: #012b4e;
+    color: white;
+    text-align: center;
+    padding: 50px 20px 100px 20px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    margin: -50px auto 50px auto;
+    background-color: white;
+    border: none;
+    border-radius: 8px; 
+    overflow: hidden;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 40%;
+    background-color: #0b588a;
+    color: white;
+    padding: 30px;
+}
+
+.left-panel h2 {
+    margin-bottom: 10px;
+}
+
+.left-panel h3 {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 60%;
+    padding: 30px;
+}
+
+.right-panel h2 {
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    resize: none;
+    font-family: inherit;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #026aa7;
+}
+
+/* Basic Mobile View */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .left-panel {
+        width: 100%;
+    }
+    .right-panel {
+        width: 100%;
+    }
+}
