@@ -46,11 +46,24 @@ body{
     justify-content: center;
 }
 
+.aboutTitle{
+    display: flex;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
 .title{
     color: var(--light);
     font-family: var(--font-heading);
-    font-size: 48px;
+    font-size: 54px;
     margin-bottom: 5px;
+}
+
+.font_Image img{
+    width: 150px;
+    height: 100px;
 }
 
 .titlePara{
