@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Tickets | LankaTrains</title>
-
     <link rel="stylesheet" href="css/style.css">
     <style>
         .search-result-container{
@@ -15,7 +14,7 @@
         }
 
         .filter-sidebar{
-            background-color: #ffffff;
+            background-color: var(--light);
             padding: 25px;
             border-radius: 15px;
             box-shadow:var(--shadow);
@@ -25,8 +24,8 @@
         .filter-sidebar h2{
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #e2e8f0;
-            color: #1e293b;
+            border-bottom: 1px solid var(--light);
+            color: var(--darker);
         }
 
         .filter-group{
@@ -37,7 +36,7 @@
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
-            color: #475569;
+            color: var(--dark);
         }
 
        
@@ -45,20 +44,21 @@
         .btn-primary{
             width:100%;
             padding:12px;
-            background-color: #3b82f6;
-            color: white;
+            background-color: var(--primary-dark);
+            color: var(--light);
             border: none;
-            border-radius: 8px;
+            border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
+            transition: var(--transition);
         }
 
         .btn-primary:hover{
-            background-color: #2563eb;
+            background-color: var(--primary);
         }
 
         .train-card{
-            background: #fff;
+            background: var(--light);
             border-radius: 15px;
             padding: 25px;
             margin-bottom: 20px;
@@ -214,25 +214,29 @@
                             <h3>Udarata Menike (1015)</h3>
                             <div class="train-route">
                                 <div>
-                                    <span class="time">05:55 AM</span><br>
+                                    <span class="time">05:55 AM</span>
+                                    <br>
                                     <small>Colombo Fort</small>
                                 </div>
                                 <div style="flex-grow: 1; text-align: center;">
-                                    <i class="fa-solid fa-arrow-right-long"></i><br>
+                                    <large>&rarr;</large>
+                                    <br>
                                     <small>9h 20m</small>
                                 </div>
                                 <div>
-                                    <span class="time">03:15 PM</span><br>
+                                    <span class="time">03:15 PM</span>
+                                    
+                                    <br>
                                     <small>Ella</small>
                                 </div>
                             </div>
                             <div class="train-features">
-                                <span><i class="fa-solid fa-snowflake"></i> A/C Available</span>
-                                <span><i class="fa-solid fa-utensils"></i> Buffet Car</span>
+                                <span> A/C Available</span>
+                                <span> | Buffet Car</span>
                             </div>
                         </div>
                         <div class="train-action">
-                            <span class="price">LKR 3,000</span>
+                            <span class="price">LKR 450</span>
                             <button class="btn-secondary">Select Seats</button>
                         </div>
                     </div>
@@ -246,8 +250,9 @@
                                     <small>Colombo Fort</small>
                                 </div>
                                 <div style="flex-grow: 1; text-align: center;">
-                                    <i class="fa-solid fa-arrow-right-long"></i><br>
-                                    <small>9h 10m</small>
+                                    <large>&rarr;</large>
+                                    <br>
+                                    <small>9h 30m</small>
                                 </div>
                                 <div>
                                     <span class="time">05:40 PM</span><br>
@@ -255,11 +260,11 @@
                                 </div>
                             </div>
                             <div class="train-features">
-                                <span><i class="fa-solid fa-eye"></i> Observation Saloon</span>
+                                <span>  Observation Saloon</span>
                             </div>
                         </div>
                         <div class="train-action">
-                            <span class="price">LKR 2,500</span>
+                            <span class="price">LKR 550</span>
                             <button class="btn-secondary">Select Seats</button>
                         </div>
                     </div>
@@ -273,7 +278,8 @@
                                     <small>Colombo Fort</small>
                                 </div>
                                 <div style="flex-grow: 1; text-align: center;">
-                                    <i class="fa-solid fa-arrow-right-long"></i><br>
+                                    <large>&rarr;</large>
+                                    <br>
                                     <small>10h 30m</small>
                                 </div>
                                 <div>
@@ -282,11 +288,11 @@
                                 </div>
                             </div>
                             <div class="train-features">
-                                <span><i class="fa-solid fa-bed"></i> Sleeping Berths</span>
+                                <span>Sleeping Berths</span>
                             </div>
                         </div>
                         <div class="train-action">
-                            <span class="price">LKR 4,000</span>
+                            <span class="price">LKR 700</span>
                             <button class="btn-secondary">Select Seats</button>
                         </div>
                     </div>
