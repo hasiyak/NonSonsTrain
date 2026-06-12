@@ -23,7 +23,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: poppins ;
+      font-family: var(--font-main);    
     }
 
 /*full screen */
@@ -31,10 +31,12 @@
       display: flex;
       width: 100vw;
       height: 100vh;
-      background-image: url('../assets/train_viwe.png'); 
+      background-image: url('../assets/train-login.jpg'); 
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      /*image animation*/
+      transition: background-image 1s ease-in-out;
     }
 
 /*left side */
@@ -89,6 +91,17 @@
     flex-direction: column;
     justify-content: space-between; 
     min-height: 550px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Expands and softens the shadow */
+}
+
+.subtitle{
+    color: #6c757d;
+    margin-bottom: 25px;
 }
 
 input[type="email"],
@@ -100,6 +113,33 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box; /* Ensures padding doesn't break the width */
+}
+label[for="email"], 
+label[for="password"] {
+    font-weight: bold;
+}
+
+.error-text {
+    color: #d9534f; /* A standard alert red */
+    font-size: 13px;
+    margin-top: -15px; /* Pulls it up slightly closer to the input box */
+    margin-bottom: 15px;
+    display: none; /* Hidden by default */
+}
+
+.form-foot {
+    display: flex;
+    justify-content: space-between; /* Pushes the left group and right link apart */
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Adds a small gap between the little square and the words "Remember me" */
 }
 
 button[type="submit"] {
@@ -127,6 +167,12 @@ button[type="submit"]:hover {
     transition: color 0.2s ease; 
 }
 
+.backHome{
+    margin-top: 15px;
+    text-align: center;
+}
+
+
 /* Optional: Adds an underline and darkens the blue slightly when you hover over the links */
 .login-card a:hover {
     color: #004c99;         /* Matches the darker blue hover state of your button */
@@ -151,3 +197,61 @@ button[type="submit"]:hover {
     width: auto;
 }
 
+/* toast container */
+
+#toast-container {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing if multiple toasts pop up at once */
+}
+
+.toast {
+    background-color: #ffffff;
+    color: #1f2937;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    
+    /* Animation setup: Starts off-screen to the right */
+    transform: translateX(150%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy slide-in effect */
+}
+
+/* When this class is added by JS, it slides into view */
+.toast.show {
+    transform: translateX(0);
+}
+
+/* Specific styling for Errors (Red) */
+.toast.error {
+    border-left: 6px solid #ef4444; /* The red strip on the left */
+}
+
+/* Specific styling for Success (Green) */
+.toast.success {
+    border-left: 6px solid #10b981; 
+}
+
+/* The little circular icons */
+.toast-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+}
+
+.error-icon { background-color: #ef4444; }
+.success-icon { background-color: #10b981; }
