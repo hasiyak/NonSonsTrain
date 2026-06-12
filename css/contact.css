@@ -19,24 +19,30 @@
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Basic Setup */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
 /* Header Section */
-.header-cnt {
-    background:linear-gradient(90deg, var(--primary-dark) 0%, var(--dark) 100%);
-    color: white;
-    text-align: center;
-    padding: 50px 20px 100px 20px;
+.titleBox{
+    background: linear-gradient(
+        90deg,
+        var(--primary-dark) 0%,
+        var(--dark) 100%
+    );
+    height : 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    color: var(--light);
+    font-family: var(--font-heading);
+    font-size: 54px;
+    margin-bottom: 5px;
+}
+
+.titlePara{
+    color: rgb(189, 189, 189);
+    font-size: 18px;
 }
 
 /* Main Container */
@@ -118,7 +124,7 @@ input, textarea {
     font-family: inherit;
 }
 
-button {
+.butt1 {
     width: 100%;
     padding: 12px;
     background-color: #0288d1;
@@ -129,7 +135,7 @@ button {
     border-radius: 8px;
 }
 
-button:hover {
+.butt1:hover {
     background-color: #026aa7;
 }
 
