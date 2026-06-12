@@ -19,6 +19,38 @@
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);    
     }
 
+         .titleBox{
+                    background: linear-gradient(
+                        90deg,
+                        var(--primary-dark) 0%,
+                        var(--dark) 100%
+                    );
+                    height : 350px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .aboutTitle{
+                    display: flex;
+                    /* background-color: red; */
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                }
+
+                .title{
+                    color: var(--light);
+                    font-family: var(--font-heading);
+                    font-size: 54px;
+                    margin-bottom: 5px;
+                }
+
+                .titlePara{
+                    color: rgb(189, 189, 189);
+                    font-size: 18px;
+                }
 
         .search-result-container{
             display: grid;
@@ -51,6 +83,14 @@
             margin-bottom: 8px;
             font-weight: bold;
             color: var(--dark);
+        }
+
+        .filter-time{
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid var(--dark);
+            shadow:var(--dark);
         }
 
        
@@ -124,8 +164,8 @@
         }
 
         .price {
-            font-size: 1.8rem;
-            font-weight: 800;
+            font-size: 29px;
+            font-weight: 600;
             color: var(--secondary);
             display: block;
             margin-bottom: 10px;
