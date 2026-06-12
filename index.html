@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSTrainz | Book Sri Lanka Train Tickets online</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
@@ -30,7 +31,52 @@
             </div>
         </div>
     </header>
+<section class = "context">
+    <div class = "context_content">
+        <h1 class = "context_title">Your Journey Begins Here</h1>
+        <p class = "context_para">Discover the beauty of Sri Lanka by rail. Fast,secure and hassle-freeonline train ticket booking</p>
 
+        <div class = "search_block">
+            <form action="booking.html" class="form_search">
+
+                <div class = "input_group">
+                    <label for="From">From</label>
+                    <select name="From" id="From">
+                        <option value="Badulla">Badulla</option>
+                        <option value="Ella">Ella</option>
+                        <option value="Kandy">Kandy</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="ColomboFort">Colombo Fort
+                        </option>  
+                    </select>
+                </div>
+                <div class = "input_group">
+                    <label for="To">To</label>
+                    <select name="To" id="To">
+                        <option value="Badulla">Badulla</option>
+                        <option value="Ella">Ella</option>
+                        <option value="Kandy">Kandy</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="ColomboFort">Colombo Fort
+                        </option>
+                    </select>
+                </div>
+                <div class = "input_group input_date">
+                    <label for="Date">Date</label>
+                    <input type="date" id="Date" name ="Date">
+                </div>
+                <div class = "input_group" id="passenger-div">
+                    <label for="Passengers">Passengers</label>
+                    <input type="number" id = "Passengers" name = "Passengers">
+                </div>
+                <button type = "search" class="search_button" id="search-btn">Search</button>
+
+            </form>
+        </div>
+    </div>
+</section>
 <!--Footer-->
     <footer>
         <div class="container">

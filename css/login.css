@@ -1,0 +1,153 @@
+:root{
+    --primary: #0284c7; 
+    --primary-dark: #0369a1;
+    --secondary: #f59e0b; 
+    --secondary-hover: #d97706;
+    --dark: #0f172a; 
+    --darker: #020617;
+    --light: #f8fafc;
+    --gray: #64748b;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-dark-bg: rgba(15, 23, 42, 0.7);
+
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+  
+    --transition: all 0.3s ease-in-out;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: poppins ;
+    }
+
+/*full screen */
+.screen-container {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('../assets/train_viwe.png'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+/*left side */
+.left-side{
+      flex: 1.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; 
+      padding: 40px;
+      color: white; 
+}
+.left-side h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    max-width: 550px;  
+}
+
+.left-side p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9); /* Makes the white text a bit softer to read */
+    max-width: 500px;      /* Restricts width so the sentence splits cleanly into two lines */
+}
+
+/*right side*/
+.right-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+          background: linear-gradient(
+        90deg,
+        var(--primary-dark) 0%,
+        var(--dark) 100%
+    );
+    }
+
+/*login card*/
+.login-card {
+    background-color: #ffffff;
+    border-radius: 15px;      
+    padding: 40px;            
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 450px; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    min-height: 550px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Ensures padding doesn't break the width */
+}
+
+button[type="submit"] {
+    width: 100%;             /* Makes the button span horizontally across the whole card */
+    padding: 16px;           /* Makes the button tall and clickable */
+    background-color: #0284c7; /* A bright, professional blue */
+    color: white;            /* Ensures the text is readable */
+    border: none;            /* Removes default browser borders */
+    border-radius: 6px;      /* Softens the corners to match the inputs */
+    font-size: 18px;         /* Makes the "Sign In" text bigger */
+    font-weight: bold;
+    cursor: pointer;         /* Changes the mouse to a hand icon on hover */
+    margin-top: 15px;        /* Adds breathing room above the button */
+    transition: background-color 0.2s ease; /* Smooth animation for the hover effect */
+}
+
+button[type="submit"]:hover {
+    background-color: #004c99; 
+}
+
+.login-card a {
+    color: #0066cc;         /* Matches the blue of your Sign In button */
+    text-decoration: none;  /* Removes the default ugly browser underline */
+    font-weight: 500;       /* Makes the text slightly bolder so it stands out */
+    transition: color 0.2s ease; 
+}
+
+/* Optional: Adds an underline and darkens the blue slightly when you hover over the links */
+.login-card a:hover {
+    color: #004c99;         /* Matches the darker blue hover state of your button */
+}
+/* dumriya logo */
+
+.logo{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.train-logo{
+    height: 100px;
+    width: auto;
+}
+
+.text-logo{
+    height: 90px;
+    width: auto;
+}
+

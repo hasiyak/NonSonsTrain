@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    background-color: #f8fafc;
+    color:#fbfbfd;
+    width:100%;
+}
+
+.context {
+    display:flex;
+    align-items: center;
+    text-align: center;
+    background-image: url('../assets/images/herocopy.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+    
+}
+
+
+
+.context_content {
+    margin: auto;
+    width: 69%;
+    
+    /*position: relative;
+    z-index: 10;
+    text-align: center;
+    
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;*/
+} 
+
+.context_title {
+    
+    font-family: Segoe UI;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.context_para {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #cbd5e1;
+}
+
+.search_block {
+    background: rgba(70, 69, 69, 0.726);
+    border: 2px solid rgb(12, 12, 12);
+    border-radius : 15px;
+}/*        
+    backdrop-filter: blur(15px);          
+     ; 
+    padding: 30px;                       
+    border-radius: 20px;                 s
+    box-shadow: var(--shadow-lg);        
+}*/
+
+.form_search {
+    margin-top:40px;
+    margin-bottom:40px;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    gap: 20px;
+}
+.form_search select{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+#Date{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+#Passengers{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.form_search .input_group {
+    width:18%;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+#passenger-div{
+    margin-left: 0;
+    width: 25%;
+    display: inline-block;
+}
+.form_search .search_button{
+    color: black;
+    padding: 10px 15px;
+    background-color: #f59e0b;
+    border-radius: 5px;
+    font-family: Segoe UI;
+    border: 1px solid black;
+    font-weight: 900;
+}
+.form_search .search_button:hover{
+    cursor: pointer;
+    background-color: #0284c7;
+    color: white;
+    transition: 200ms ease-in;
+}
+
+.input_group input,
+.input_group select {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#search-btn{
+    display: block;
+    margin:auto;
+    font-size: 24px;
+    padding: 15px 25px;
+    
+}
