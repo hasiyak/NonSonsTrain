@@ -7,6 +7,60 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+:root{
+    --primary: #0284c7; 
+    --primary-dark: #0369a1;
+    --secondary: #f59e0b; 
+    --secondary-hover: #d97706;
+    --dark: #0f172a; 
+    --darker: #020617;
+    --light: #f8fafc;
+    --gray: #64748b;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-dark-bg: rgba(15, 23, 42, 0.7);
+
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+  
+    --transition: all 0.3s ease-in-out;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.Schedules{
+    background: linear-gradient(
+        90deg,
+        var(--primary-dark) 0%,
+        var(--dark) 100%
+    );
+    height : 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.schTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.title-sch{
+    color: var(--light);
+    font-family: var(--font-heading);
+    font-size: 54px;
+    margin-bottom: 5px;
+}
+
+.schPara{
+    color: rgb(189, 189, 189);
+    font-size: 18px;
+}
+</style>
 
 <body>
     <!--Navigation-->
@@ -30,6 +84,17 @@
             </div>
         </div>
     </header>
+
+    <!--schedules box-->
+    <div class="Schedules">
+        <div class="schTitle">
+            <h1 class="title-sch">Train <span>Schedules & Timetables</span></h1>
+        </div>
+        <p class="schPara">Connecting the nation, one scenic journey at a time</p>
+    </div>
+
+
+
     <!--Footer-->
     <footer>
         <div class="container">
