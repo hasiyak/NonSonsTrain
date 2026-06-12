@@ -13,7 +13,7 @@ body {
     display:flex;
     align-items: center;
     text-align: center;
-    background-image: url('assets/images/herocopy.png');
+    background-image: url('../assets/images/herocopy.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
