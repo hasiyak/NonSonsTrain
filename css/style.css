@@ -92,12 +92,13 @@ header.scrolled{
 .nav-links{
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     display: flex;
     gap: 30px;
 }
 
 .nav-links li a{
+    padding-top: 18px ;
     text-decoration: none;
     color: #fff;
     font-weight: 500;
@@ -156,6 +157,11 @@ header.scrolled{
 .nav-buttons .btn-register:hover{
     background: #0077b3;
     color: #fff;
+<<<<<<< HEAD
+
+}   
+=======
+>>>>>>> a325fb3150787832e0204944681db4c25c6c08a7
 
 }
 
@@ -249,4 +255,8 @@ footer-info i{
     color: var(--gray);
     font-size: 0.9rem;
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> c5abad68689f303740d12442f87a956f93eef6de
+>>>>>>> a325fb3150787832e0204944681db4c25c6c08a7
