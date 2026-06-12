@@ -71,7 +71,7 @@ header.scrolled{
     color: #fff;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2px;
 }
 
 .logo img{

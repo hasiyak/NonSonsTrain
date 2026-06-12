@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Header Scroll Effect
     const header = document.querySelector('header');
+    const logoName = document.getElementById('logo-name');
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
