@@ -33,13 +33,136 @@ body{
     overflow-x: hidden;
 }
 
+/* Navigation */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+    background: transparent;
+    padding: 25px 0;
+}
+
+header.scrolled{
+    background: var(--darker);
+    padding: 15px  0;
+    box-shadow: var(--shadow);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    height: 35px;
+    width: auto;
+}
+
+.logo-name{
+    font-style: normal;
+}
+
+.logo span{
+    color: var(--secondary);
+}
+
+.nav-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links li a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: var(--transition);
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after{
+    width: 100%
+}
+
+.nav-buttons button{
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.nav-buttons .btn-login{
+
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color:#fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-right: 10px;
+    transition: var(--transition);
+}
+
+.nav-buttons .btn-login:hover{
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-buttons .btn-register{
+    background: var(--primaryy);
+    color: #fff;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-buttons .btn-register:hover{
+    background: #0077b3;
+    color: #fff;
+}   
+
 .titleBox{
     background: linear-gradient(
         90deg,
         var(--primary-dark) 0%,
         var(--dark) 100%
     );
-    height : 250px;
+    height : 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,3 +295,4 @@ body{
     margin-top: -25px;
     transition: var(--transition);
 }
+
