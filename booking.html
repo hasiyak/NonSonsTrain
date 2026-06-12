@@ -3,152 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Booking | දුම්රිය  </title>
     <link rel="stylesheet" href="css/style.css">
-=======
     <title>Book Tickets | LankaTrains</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .search-result-container{
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 30px;
-            padding: 40px 50px;
-        }
+    <link rel="stylesheet" href="css/booking.css">
 
-        .filter-sidebar{
-            background-color: var(--light);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow:var(--shadow);
-            height: fit-content;
-        }
-
-        .filter-sidebar h2{
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--light);
-            color: var(--darker);
-        }
-
-        .filter-group{
-            margin-bottom: 20px;
-        }
-
-        .filter-group label.criteria-label{
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: var(--dark);
-        }
-
-       
-
-        .btn-primary{
-            width:100%;
-            padding:12px;
-            background-color: var(--primary-dark);
-            color: var(--light);
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: var(--transition);
-        }
-
-        .btn-primary:hover{
-            background-color: var(--primary);
-        }
-
-        .train-card{
-            background: var(--light);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: var(--transition);
-            border-left: 5px solid var(--primary);
-        }
-
-        .train-route{
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--gray);
-            margin-bottom: 15px;
-        }
-
-        .train-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .train-info h3 {
-            color: var(--darker);
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-
-        .time {
-            font-weight: 700;
-            color: var(--dark);
-            font-size: 18px;
-        }
-
-        .train-features{
-             display: inline-block;
-            background: #f1f5f9;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin-right: 10px;
-            color: var(--dark);
-        }
-
-         .train-action {
-            text-align: right;
-        }
-
-        .price {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--secondary);
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .btn-secondary{
-            padding: 10px 20px;
-            background-color:var(--secondary);
-            color:;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: var(--transition);
-        }
-
-        .btn-secondary:hover{
-            background-color: var(--secondary-hover);
-            transform: translateY(-2px);
-            
-        }
-        
-       
-       
-
-
-
-        
-    </style>
->>>>>>> a325fb3150787832e0204944681db4c25c6c08a7
 </head>
 <body>
-    
+      <!--Navigation-->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo" id="logo-name">
+                <img src="assets/train-whit.png" alt="logo" class="train-logo">
+                <i></i><img src="assets/Dumriya_Icon-yellow.png" alt="Dumriya logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="schedules.html">Schedules</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <button class="btn-login">Login</button>
+                <button class="btn-register">Register</button>
+            </div>
+        </div>
+    </header>
+
     <section class="section">
         <div class="main-container">
 
@@ -290,29 +174,6 @@
             </div>
         </div>
     </section>
-
-
-    <!--Navigation-->
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo" id="logo-name">
-                <img src="assets/train-whit.png" alt="logo" class="train-logo">
-                <i></i><img src="assets/Dumriya_Icon-yellow.png" alt="Dumriya logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="schedules.html">Schedules</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-
-            <div class="nav-buttons">
-                <button class="btn-login">Login</button>
-                <button class="btn-register">Register</button>
-            </div>
-        </div>
-    </header>
 
     <!--Footer-->
     <footer>

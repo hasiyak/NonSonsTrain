@@ -32,8 +32,7 @@ body{
     line-height: 1.6;
     overflow-x: hidden;
 }
-<<<<<<< HEAD
-=======
+
 
 /* Navigation */
 
@@ -157,12 +156,6 @@ header.scrolled{
 .nav-buttons .btn-register:hover{
     background: #0077b3;
     color: #fff;
-<<<<<<< HEAD
-
-}   
-=======
->>>>>>> a325fb3150787832e0204944681db4c25c6c08a7
-
 }
 
 /* footer */
@@ -255,8 +248,3 @@ footer-info i{
     color: var(--gray);
     font-size: 0.9rem;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> c5abad68689f303740d12442f87a956f93eef6de
->>>>>>> a325fb3150787832e0204944681db4c25c6c08a7
