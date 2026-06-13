@@ -1,4 +1,4 @@
-// Train Database variable
+// train data intial
 const initialTrains = [
     {
         id: "1015",
@@ -11,7 +11,7 @@ const initialTrains = [
         price: 3000,
         type: "intercity",
         timeCategory: "morning",
-        classes: ["first", "second"],
+        classes: ["first-class", "second-class"],
         amenities: [
             '<span><i class="fa-solid fa-snowflake"></i> A/C Available</span>',
             '<span><i class="fa-solid fa-utensils"></i> Buffet Car</span>'
@@ -28,7 +28,7 @@ const initialTrains = [
         price: 2500,
         type: "intercity",
         timeCategory: "morning",
-        classes: ["second", "third"],
+        classes: ["second-class", "third-class"],
         amenities: [
             '<span><i class="fa-solid fa-eye"></i> Observation Saloon</span>'
         ]
@@ -44,7 +44,7 @@ const initialTrains = [
         price: 4000,
         type: "nightmail",
         timeCategory: "night",
-        classes: ["first", "second", "third"],
+        classes: ["first-class", "second-class", "third-class"],
         amenities: [
             '<span><i class="fa-solid fa-bed"></i> Sleeping Berths</span>'
         ]
@@ -60,7 +60,7 @@ const initialTrains = [
         price: 1500,
         type: "intercity",
         timeCategory: "morning",
-        classes: ["first", "second"],
+        classes: ["first-class", "second-class"],
         amenities: [
             '<span><i class="fa-solid fa-snowflake"></i> A/C Available</span>',
             '<span><i class="fa-solid fa-eye"></i> Observation Saloon</span>'
@@ -68,39 +68,47 @@ const initialTrains = [
     }
 ];
 
-// Creating Local Storage Database
+//create a localstorage
 function initializeDatabase() {
-    if (!localStorage.getItem('trainDatabase')) {
-        localStorage.setItem('trainDatabase', JSON.stringify(initialTrains));
-        console.log("Train data initialized in local storage.");
+    let data = localStorage.getItem('trainDatabase');
+    if (data == null) {
+        let trainString = JSON.stringify(initialTrains);
+        localStorage.setItem('trainDatabase', trainString);
+        console.log("sucess in putting train data");
+        
     }
 }
 
-// Get Data from Local Storage
+//get from localstorage
 function getTrainsFromStorage() {
-    const trainsJSON = localStorage.getItem('trainDatabase');
-    return JSON.parse(trainsJSON) || [];
+    let trainsJSON = localStorage.getItem('trainDatabase');
+    if (trainsJSON != null) {
+        let trainArray = JSON.parse(trainsJSON);
+        return trainArray;
+    } else {
+        let empty = [];
+        return empty;
+    }
 }
 
-// Render the Train Cards]
-function renderTrainList(trainsToRender) {
-    const container = document.querySelector('.results-list'); 
+// Traiin card displayinhg
+function renderTrainList(trainsrederinglist) {
+    const container = document.getElementById('train-result-display'); 
     container.innerHTML = ''; 
 
-    if (trainsToRender.length === 0) {
-        container.innerHTML = '<p style="text-align: center; padding: 20px;">No trains match your selected filters.</p>';
-        return null;
+    if (trainsrederinglist.length == 0) {
+        container.innerHTML = "<p>No trains match your selected filters.</p>";
+        return; 
     }
 
-    trainsToRender.forEach((train) => {
-        const amenitiesHTML = train.amenities.join('');
+    trainsrederinglist.forEach((train) => {
+        let amenitiesHTML = "";
+        for (let i = 0; i < train.amenities.length; i++) {
+            amenitiesHTML = amenitiesHTML + train.amenities[i];
+        };
 
-        const cardHTML = `
-            <div class="train-card" 
-                 data-type="${train.type}" 
-                 data-time="${train.timeCategory}"
-                 data-id="${train.id}">
-                
+        let cardHTML = `
+            <div class="train-card">
                 <div class="train-info">
                     <h3>${train.name} (${train.id})</h3>
                     <div class="train-route">
@@ -108,8 +116,8 @@ function renderTrainList(trainsToRender) {
                             <span class="time">${train.departureTime}</span><br>
                             <small>${train.from}</small>
                         </div>
-                        <div style="flex-grow: 1; text-align: center;">
-                            <i class="fa-solid fa-arrow-right-long"></i><br>
+                        <div style="text-align: center;">
+                            <i class="fa-solid fa-arrow-right-long">&rarr;</i><br>
                             <small>${train.duration}</small>
                         </div>
                         <div>
@@ -122,64 +130,85 @@ function renderTrainList(trainsToRender) {
                     </div>
                 </div>
                 <div class="train-action">
-                    <span class="price">LKR ${train.price.toLocaleString()}</span>
-                    <button class="btn btn-secondary" onclick="goToSeatSelection('${train.id}')">Select Seats</button>
+                    <span class="price">LKR ${train.price}</span>
+                    <button class="btn-secondary" onclick="goToSeatSelection('${train.id}')">Select Seats</button>
                 </div>
             </div>
         `;
 
-        container.insertAdjacentHTML('beforeend', cardHTML);
+        container.innerHTML = container.innerHTML + cardHTML;
     });
 }
-
-// Navigation function
 function goToSeatSelection(trainId) {
     localStorage.setItem('selectedTrain', trainId);
-    // Navigates to your seat reservation page
     window.location.href = 'seat-reservation.html'; 
 }
-
-// Filter 
 function applyFilters() {
     const allTrains = getTrainsFromStorage();
 
-    // Getting selected train types, classes and times
-    // Get selected Train Types
-    let allTypeBoxes = document.getElementsByClassName('filter-type');
-    let selectedTypes = []; 
-    for (let t = 0; t < allTypeBoxes.length; t++) {
-        if (allTypeBoxes[t].checked == true) {
-            let boxValue = allTypeBoxes[t].value;
-            selectedTypes.push(boxValue); 
+    let intercityCheckbox = document.getElementById("intercity");
+    let nightmailCheckbox = document.getElementById("nightmail");
+
+    let selectedTypes = [];
+
+    if (intercityCheckbox.checked == true) {
+        selectedTypes.push(intercityCheckbox.value);
     }
 
-    // Get selected Classes
-    let allClassBoxes = document.getElementsByClassName('filter-class');
-    let selectedClasses = []; 
-
-    for (let c = 0; c < allClassBoxes.length; c++) {
-        if (allClassBoxes[c].checked == true) {
-            let classValue = allClassBoxes[c].value;
-            selectedClasses.push(classValue); 
-        }
+    if (nightmailCheckbox.checked == true) {
+        selectedTypes.push(nightmailCheckbox.value);
     }
 
-    // Get selected Time
-    var timeDropdown = document.getElementById('filter-time');
-    var selectedTime = timeDropdown.value;
+    // Get selected Class
+    let firstClassCheckbox = document.getElementById("First-class");
+    let secondClassCheckbox = document.getElementById("second-class");
+    let thirdClassCheckbox = document.getElementById("third-class");
 
+    let selectedClasses = [];
 
-    // Filter the array
+    if (firstClassCheckbox.checked == true) {
+        selectedClasses.push(firstClassCheckbox.value);
+    }
+
+    if (secondClassCheckbox.checked == true) {
+        selectedClasses.push(secondClassCheckbox.value);
+    }
+
+    if (thirdClassCheckbox.checked == true) {
+        selectedClasses.push(thirdClassCheckbox.value);
+    }
+
+    // Get time
+    let timeDropdownElem = document.getElementById("filter-time");
+
+    let selectedTime = timeDropdownElem.value;
+
+    // Filtera rray
     const filteredTrains = allTrains.filter(train => {
-        // Check Type
-        const matchesType = selectedTypes.includes(train.type);
+        let matchesType = false;
+        if (selectedTypes.length == 0) {
+            matchesType = true;
+        }else if (selectedTypes.includes(train.type)) {
+            matchesType = true;
+        }
         
-        // Check Class
-        const matchesClass = train.classes.some(c => selectedClasses.includes(c));
+        let matchesClass = false;
+        if (selectedClasses.length == 0) {
+            matchesClass = true;
+        } 
+        else {
+            for (let c = 0; c < train.classes.length; c++) {
+                let singleClass = train.classes[c];
+                
+                if (selectedClasses.includes(singleClass)) {
+                    matchesClass = true;
+                }
+            }
+        }
         
-        // Check Time
+        // time
         let matchesTime = false;
-        if (selectedTime == 'any') {
+        if (selectedTime == "any") {
             matchesTime = true;
         } else if (train.timeCategory == selectedTime) {
             matchesTime = true;
@@ -191,17 +220,15 @@ function applyFilters() {
     });
 
     renderTrainList(filteredTrains);
-}};
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeDatabase();
     
-    //  render all trains at srtr
+    // Render
     renderTrainList(getTrainsFromStorage());
-
-    const filterBtn = document.getElementById('applyFiltersBtn');
+    const filterBtn = document.querySelector('.filter-sidebar .btn-primary');
     if (filterBtn) {
         filterBtn.addEventListener('click', applyFilters);
     }
-
 });
