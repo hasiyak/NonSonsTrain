@@ -36,10 +36,52 @@
 .rightBox{
     display: flex;
     height: 100vh;
-    padding: 30px 10px;
+    padding: 100px 10px;
 }
 
 .formBox{
-    box-shadow: var(--shadow);
-    padding: 80px 30px;
+    height: 82vh;
+    box-shadow: var(--shadow-lg);
+    padding: 80px 50px;
+    border-radius: 10px;
+}
+
+.createPara{
+    color: var(--gray);
+    padding: 5px 0px;
+    margin-bottom: 15px;
+}
+
+.createText{
+    font-family: var(--font-heading);
+}
+
+label{
+    font-weight: bold;
+}
+
+.inputBar{
+    width: 100%;
+    height: 34px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+input{
+    border: 1px solid rgb(157, 157, 157);
+    border-radius: 8px;
+    padding: 4px 10px;
+    transition: var(--transition);
+}
+
+.inputBar:focus{
+    padding: 4px 15px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0px 8px 10px rgba(255, 255, 255, 0.8);
+}
+
+a{
+    color: var(--primary);
+    cursor: pointer;
+    text-decoration: none;
 }

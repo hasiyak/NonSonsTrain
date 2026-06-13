@@ -1,0 +1,101 @@
+.seat-selection-container {
+    max-width: 500px;
+
+    margin: 50px auto;
+
+    background-color: white;
+    padding: 30px;
+
+    border-style: 1px solid #cccccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.legend {
+    text-align: center;
+    list-style-type: none;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.legend li {
+    color: black;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.seat-box {
+    color: black;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999999;
+
+    border-radius: 4px;
+
+    margin-right: 5px;
+    margin-top: 4px; 
+}
+
+/* seats container  */
+.seat-grid {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center; 
+}
+
+/* seats unit */
+.seat {
+    display: inline-block;
+    width: 20%; 
+    margin: 5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #e2e8f0;
+    border-style: solid 1px #cbd5e1;
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* seat  selected */
+.seat.selected {
+    color: white;
+    background-color: blue;
+    border-color: darkblue;
+}
+
+/* already booked */
+.seat.occupied {
+    border-color: darkred;
+    background-color: red;
+    
+    color: white;
+}
+
+/* Bottom buttons  */
+.action-buttons {
+    width: 100%;
+    text-align: center;
+}
+.action-buttons button {
+    margin: 5px;
+    border-style: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 12px;
+}
+.btn-book {
+    color: white;
+    background-color: blue;
+}
+
+.btn-back {
+    background-color: #e2e8f0;
+    color: #333333;
+}

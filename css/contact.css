@@ -19,7 +19,7 @@
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Header Section */
+/* Get in touch bg Section */
 .titleBox{
     background: linear-gradient(
         90deg,
@@ -33,6 +33,7 @@
     justify-content: center;
 }
 
+/* Get in touch text Section */
 .title{
     color: var(--light);
     font-family: var(--font-heading);
@@ -40,12 +41,13 @@
     margin-bottom: 5px;
 }
 
+/* sub para near get in touch */
 .titlePara{
     color: rgb(189, 189, 189);
     font-size: 18px;
 }
 
-/* Main Container */
+/* Form Main box */
 .container-cnt {
     display: flex;
     width: 80%;
@@ -58,10 +60,14 @@
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Left Panel */
+/* Form Left box */
 .left-panel {
-    width: 40%;
-    background-color: #0b588a;
+    width: 50%;
+    background: linear-gradient(
+        90deg,
+        var(--dark) 0%,
+        var(--primary-dark) 100%
+    );
     color: white;
     padding: 30px;
 }
@@ -91,7 +97,7 @@
     font-size: 18px;
 }
 
-/* Right Panel */
+/*Form Right Box*/
 .right-panel {
     width: 60%;
     padding: 30px;
@@ -137,6 +143,48 @@ input, textarea {
 
 .butt1:hover {
     background-color: #026aa7;
+}
+/* js for contact form */
+.toast {
+    position: fixed;
+    top: 30px;
+    right: -400px;
+    background-color: white;
+    color: #1f2937;
+    padding: 16px 24px;
+    border-radius: 12px;
+    border-left: 6px solid #10b981;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    transition: right 0.5s ease; 
+    z-index: 1000;
+}
+
+.toast.show {
+    right: 30px; 
+}
+
+.toast-icon {
+    background-color: #10b981; 
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    font-size: 14px;
+    font-weight: bold;
+}
+.error-toast {
+    border-left: 6px solid #ef4444; 
+}
+
+.error-icon {
+    background-color: #ef4444; 
 }
 
 /* Basic Mobile View */

@@ -4,18 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | දුම්රිය</title>
-    <link rel="stylesheet" href="css/contact.css">
-
-    <title>Contact Us</title>
-    <!--<link rel="stylesheet" href="css/contact.css">-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
     
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-       <!--Navigation-->
      <!--Navigation-->
       <header>
         <div class="container nav-container">
@@ -37,48 +31,52 @@
             </div>
         </div>
     </header>
+
+    <!-- Get in touch Section -->
     <div class="titleBox">
         <div class="aboutTitle">
-            <h1 class="title">Get in Touch</h1> 
+            <h1 class="title">Get in <span style="color: #ffd000;">Touch</span></h1> 
         </div>
         <p class="titlePara">We are here to help you with any inquiries or booking issues.</p>
     </div>
 
-
+    <!-- Form box -->
     <main class="container-cnt">
+        <!-- Form box left part -->
         <section class="left-panel">
             <h2>Contact Information</h2>
             <p>Fill up the form and our team will get back to you within 24 hours.</p>
+            <br>
 
             <div class="info-item">
-                <img src="assets/call.png" alt="Phone Icon">
+                <img src="assets/call1.png" alt="Phone Icon">
                 <div>
                     <h3>Call Us</h3>
-                    <p>+94 11 234 5678<br>+94 77 123 4567</p>
+                    <p>+94 38 223 0145<br>+94 77 911 6471</p>
                 </div>
             </div>
 
             <div class="info-item">
-                <img src="assets/email.png" alt="Email Icon">
+                <img src="assets/email1.png" alt="Email Icon">
                 <div>
                     <h3>Email Us</h3>
-                    <p>support@lankatrains.lk<br>info@lankatrains.lk</p>
+                    <p>support@dummriya.lk<br>info@dummriya.lk</p>
                 </div>
             </div>
 
             <div class="info-item">
-                <img src="assets/from.png" alt="Location Icon">
+                <img src="assets/from1.png" alt="Location Icon">
                 <div>
                     <h3>Head Office</h3>
                     <p>247, Bollatha<br>Ganemulla,<br>Sri Lanka</p>
                 </div>
             </div>
         </section>
-
+        <!-- Form box right part -->
         <section class="right-panel">
             <h2>Send us a message</h2>
             
-            <form action="#" method="POST">
+            <form id="contactForm" action="#" method="POST">
                 <div>
                     <label>Full Name</label>
                     <input type="text" placeholder="Sunil Amarasinghe">
@@ -99,6 +97,18 @@
             </form>
         </section>
     </main>
+    <!-- js for contact form -->
+    <div id="toastBox" class="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-text">Message sent successfully!</span>
+    </div>
+
+    <div id="errorToastBox" class="toast error-toast">
+        <span class="toast-icon error-icon">✖</span>
+        <span class="toast-text">Please fill in all fields!</span>
+    </div>
+
+    <script src="js/contact.js"></script>
 
     <!--Footer-->
     <footer>
@@ -122,13 +132,13 @@
                 <h4>Contact Support</h4>
                 <ul class="social-links">
                     <li><i class="phone-no">+94 740 953 993</i></li>
-                    <li><i class="email-add">support@nstrainz.lk</i></li>
+                    <li><i class="email-add">support@Dumriya.lk</i></li>
                     <li><i class="location-add">Colombo, Sri Lanka</i></li>
                 </ul>
             </div>  
         </div>  
             <div class="footer-bottom">
-                <p>Copyright &copy; 2026 NSTrainz. All rights reserved.</p>
+                <p>Copyright &copy; 2026 Dumriya. All rights reserved.</p>
             </div>
     </footer>
 

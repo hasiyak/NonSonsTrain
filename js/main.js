@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileToggle = document.querySelector('.mobile-toggle');
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
-            alert('Mobile menu toggled! (Implement a slide-in menu here for production)');
+            alert('Mobile menu toggled!');
         });
     }
 
@@ -66,8 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // --- Authentication & Dynamic Header Logic ---
     
     // Redirect when clicking Login/Register in header
     const loginButtons = document.querySelectorAll('.btn-login');
