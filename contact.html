@@ -76,7 +76,7 @@
         <section class="right-panel">
             <h2>Send us a message</h2>
             
-            <form action="#" method="POST">
+            <form id="contactForm" action="#" method="POST">
                 <div>
                     <label>Full Name</label>
                     <input type="text" placeholder="Sunil Amarasinghe">
@@ -97,6 +97,18 @@
             </form>
         </section>
     </main>
+    <!-- js for contact form -->
+    <div id="toastBox" class="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-text">Message sent successfully!</span>
+    </div>
+
+    <div id="errorToastBox" class="toast error-toast">
+        <span class="toast-icon error-icon">✖</span>
+        <span class="toast-text">Please fill in all fields!</span>
+    </div>
+
+    <script src="js/contact.js"></script>
 
     <!--Footer-->
     <footer>
