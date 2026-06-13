@@ -38,7 +38,6 @@
         </div>
         <p class="titlePara">Showing trains from Colombo to Ella for <strong id="current-date"></strong></p>
 
-        //updating current date with js
         <script>
             const today = new Date();
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -53,12 +52,12 @@
 
             <div class="search-result-container">
 
-                //the filter sidebar
+               
                 <aside class="filter-sidebar">
                     <h2>Filters</h2>
                     <div class="filter-group">
 
-                        //train type filter
+                      
                         <label class="criteria-label">Train Type</label>
                         <div>
                             <input type="checkbox" id="intercity" value="intercity">
@@ -72,7 +71,7 @@
 
                     <div class="filter-group">
 
-                        //train class filter
+                        
                         <label class="criteria-label">Class</label>
                         <div>
                             <input type="checkbox" id="First-class" value="first-class">
@@ -89,7 +88,7 @@
                     </div>
                     <div class="filter-group">
 
-                        //train time filter
+                        
                         <label class="criteria-label">Departure time</label>
                         <select id="filter-time" class="filter-time" style="width: 100%; padding: 8px; border-radius: 5px; border: 0.5px solid var(--dark);">
                             <option value="any">Any Time</option>
@@ -137,7 +136,7 @@
 
                     <div class="train-card" style="transition-delay: 0.1s;" data-type="intercity" data-class="second third" data-time="morning">
                         <div class="train-info">
-                            //train 2
+                           
                             <h3>Podi Menike (1005)</h3>
                             <div class="train-route">
                                 <div>
@@ -166,7 +165,7 @@
 
                     <div class="train-card" style="transition-delay: 0.2s;" data-type="nightmail" data-class="first second third" data-time="night">
                         <div class="train-info">
-                            //train 3
+                            
                             <h3>Night Mail (1045)</h3>
                             <div class="train-route">
                                 <div>
