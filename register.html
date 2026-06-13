@@ -4,40 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | දුම්රිය</title>
-    <link rel="stylesheet" href="css/register.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <div class="mainBox">
-        <div class="leftBox">
-            
+    <div class="screen-container">
+       
+        <div class="left-side">
+            <a href="index.html" class="logo" id="logo-name">
+                <img src="assets/train-whit.png" alt="logo" class="train-logo">
+                <img src="assets/Dumriya_Icon-yellow.png" alt="Dumriya logo" class="text-logo">
+            </a>
+            <h1>Your Journey Across Sri Lanka Begins Here</h1>
+            <p>Experience the most scenic rail routes, reserve seats instantly, and manage your bookings in one place.</p>
         </div>
-        <div class="rightBox">
-            <div class="formBox">
-                <h2 class="creatText">Create Account</h2>
-                <p class="createPara">Enter your details to create a new train ticketing account</p>
+       
+        <div class="right-side">
+            <div class="login-card">
+                <h2>Create Account</h2>
+                <p>Enter your details to create a new train ticketing account</p>
+               
                 <form action="/">
                     <label for="userName">Name</label><br>
-                    <input type="text" id="userName" name="userName" class="inputBar" placeholder="Enter the name"><br>
+                    <input type="text" id="userName" name="userName" placeholder="Enter the name"><br>
+                   
                     <label for="email">E-mail Address</label><br>
-                    <input class="inputBar" type="email" name="email" id="email" placeholder="example@gmail.com">
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com">
                     <i id="email-error"></i><br>
+                   
                     <label for="phoneNo">Phone Number</label><br>
-                    <input class="inputBar" type="text" name="phoneNo" id="phoneNo" placeholder="07x xxx xxxx">
+                    <input type="text" name="phoneNo" id="phoneNo" placeholder="07x xxx xxxx">
                     <i id="phoneNo-error"></i><br>
+                   
                     <label for="pass">Password</label><br>
-                    <input class="inputBar" type="password" name="pass" id="pass" placeholder="New password">
+                    <input type="password" name="pass" id="pass" placeholder="New password">
                     <i id="pass-error"></i><br>
+                   
                     <label for="confirm">Confirm Password</label><br>
-                    <input class="inputBar" type="password" name="confirm" id="confirm" placeholder="Re-enter the password">
+                    <input type="password" name="confirm" id="confirm" placeholder="Re-enter the password">
                     <i id="confirm-error"></i><br>
+                   
                     <input type="checkbox" name="agreeBox" id="agreeBox">
-                    <label for="agreeBox">I agree to the <a href="/">Termsof Service</a> and <a href="/">Privacy Policy</a></label>
-                    <i id="condition-error"></i>
+                    <label for="agreeBox">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label><br>
+                    <i id="condition-error"></i><br>
+                   
+                    <button type="submit">Sign Up</button>
                 </form>
 
+                <p>Already have an account? <a href="login.html">Sign In</a></p>
+                <p><a href="index.html">Back to Home</a></p>
             </div>
         </div>
+       
     </div>
 </body>
 </html>
