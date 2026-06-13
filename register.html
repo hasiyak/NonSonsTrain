@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | දුම්රිය</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
     <div class="screen-container">
        
         <div class="left-side">
-            <a href="index.html" class="logo" id="logo-name">
+            <a href="index.html" class="logo" id="logo-name" width="50px">
                 <img src="assets/train-whit.png" alt="logo" class="train-logo">
                 <img src="assets/Dumriya_Icon-yellow.png" alt="Dumriya logo" class="text-logo">
             </a>
@@ -21,7 +21,7 @@
         <div class="right-side">
             <div class="login-card">
                 <h2>Create Account</h2>
-                <p>Enter your details to create a new train ticketing account</p>
+                <p class="subtitle">Enter your details to create a new train ticketing account</p>
                
                 <form action="/">
                     <label for="userName">Name</label><br>
@@ -50,11 +50,14 @@
                     <button type="submit">Sign Up</button>
                 </form>
 
-                <p>Already have an account? <a href="login.html">Sign In</a></p>
-                <p><a href="index.html">Back to Home</a></p>
+                <p style="margin-top: 25px;">Already have an account? <a href="login.html">Sign In</a></p>
+                <p class="backHome"><a href="index.html">Back to Home</a></p>
             </div>
         </div>
        
     </div>
+
+    <div id="toast-container"></div>
+    <script src="js/login.js"></script>
 </body>
 </html>
