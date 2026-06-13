@@ -1,84 +1,75 @@
 const trainId = localStorage.getItem('selectedTrain');
-const storageKey = `bookedSeats_${trainId}`; // unique save key per train 
+const storageKey = `bookedSeats_${trainId}`;
 
 const trainTitle = document.getElementById('train-title');
 const seatGrid = document.getElementById('seat-grid');
 const bookBtn = document.getElementById('book-btn');
 
-const TOTAL_SEATS = 60;
+const totalSeats = 60;
 
-function initPage() {
-    // send peopel who are directly coming without vising the booking page
-    if (!trainId) {
-        window.location.href = 'booking.html';
-        return null;
-    }
-
+function loading() {
     // title
     trainTitle.innerText = `Booking Seats for Train ${trainId}`;
 
-    // previous booked seat list
-    let bookedSeatsData = localStorage.getItem(storageKey);
+    // booked seat list
+    let bookedSeatsD = localStorage.getItem(storageKey);
     let bookedSeats;
 
-    if (bookedSeatsData) {
-        bookedSeats = JSON.parse(bookedSeatsData);
+    if (bookedSeatsD) {
+        bookedSeats = JSON.parse(bookedSeatsD);
     } else {
         bookedSeats = [];
     }
 
     // Generate the seat grid
-    for (let i = 0; i < TOTAL_SEATS; i++) {
-        const seat = document.createElement('div');
-        seat.classList.add('seat');
-        seat.innerText = i + 1; // Give the seat a number
-        seat.dataset.index = i; // Store the index for later
+    for (let i = 0; i < totalSeats; i++) {
+        let seatNumber = i + 1;
+        let isbooked = bookedSeats.includes(seatNumber);
 
-        // If this seat's index is in our local storage array, mark it occupied
-        if (bookedSeats.includes(i)) {
-            seat.classList.add('occupied');
+        if (isbooked == true) {
+            seatGrid.innerHTML = seatGrid.innerHTML + `<div class="seat occupied">${seatNumber}</div>`;
+        } 
+        else {
+            seatGrid.innerHTML = seatGrid.innerHTML + `
+                <div class="seat" onclick="
+                    if (this.className == 'seat') { this.className = 'seat selected'; } 
+                    else { this.className = 'seat'; }
+                ">${seatNumber}</div>
+            `;;
         }
-
-        // Add click listener for selecting the seat
-        seat.addEventListener('click', () => {
-            if (!seat.classList.contains('occupied')) {
-                seat.classList.toggle('selected');
-            }
-        });
-
-        seatGrid.appendChild(seat);
     }
 }
 
-// 4. Handle the Booking Action
+// Booking action
 bookBtn.addEventListener('click', () => {
-    // Find all seats the user currently clicked (highlighted blue)
     const selectedSeats = document.querySelectorAll('.seat.selected');
     
-    if (selectedSeats.length === 0) {
+    if (selectedSeats.length == 0) {
         alert('Please select at least one seat to book.');
         return;
     }
 
-    // Get the existing bookings from storage again
-    let bookedSeats = JSON.parse(localStorage.getItem(storageKey)) || [];
+    let bookeddatas = localStorage.getItem(storageKey);
+    let bookedSeats = [];
 
-    // Loop through the selected UI elements, get their numbers, and add to the array
-    selectedSeats.forEach(seat => {
-        // Convert the dataset string to an integer and push to array
-        const seatIndex = parseInt(seat.dataset.index);
-        bookedSeats.push(seatIndex);
+    if (bookeddatas != null) {
+        bookedSeats = JSON.parse(bookeddatas);
+    } else {
+        bookedSeats = [];
+    };
 
-        // Update the UI immediately
-        seat.classList.remove('selected');
-        seat.classList.add('occupied');
+    
+    let allSelectedSeats = document.querySelectorAll(".seat.selected");
+    allSelectedSeats.forEach(function(seat) {
+        let seatNumber = parseInt(seat.innerText);
+        bookedSeats.push(seatNumber);
+        seat.className = "seat occupied";
     });
 
-    // Save the newly updated array back to local storage
-    localStorage.setItem(storageKey, JSON.stringify(bookedSeats));
+    let updatedString = JSON.stringify(bookedSeats);
+    localStorage.setItem(storageKey, updatedString);
 
-    alert(`Successfully booked ${selectedSeats.length} seat(s)!`);
+    alert(`Successfully booked ${selectedSeats.length} seats..`);
 });
 
-// Run initialization when the script loads
-initPage();
+loading();
