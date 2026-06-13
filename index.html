@@ -7,6 +7,7 @@
     <title>Home | දුම්රිය </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
+
 </head>
 
 <body>
@@ -46,7 +47,7 @@
                         <option value="Ella">Ella</option>
                         <option value="Kandy">Kandy</option>
                         <option value="Jaffna">Jaffna</option>
-                        <option value="Jaffna">Jaffna</option>
+                        <option value="Galle">Galle</option>
                         <option value="ColomboFort">Colombo Fort
                         </option>  
                     </select>
@@ -58,18 +59,18 @@
                         <option value="Ella">Ella</option>
                         <option value="Kandy">Kandy</option>
                         <option value="Jaffna">Jaffna</option>
-                        <option value="Jaffna">Jaffna</option>
+                        <option value="Galle">Galle</option>
                         <option value="ColomboFort">Colombo Fort
                         </option>
                     </select>
                 </div>
-                <div class = "input_group input_date">
+                <div class = "input_group">
                     <label for="Date">Date</label>
-                    <input type="date" id="Date" name ="Date">
+                    <input type="date" id="Date" name="Date" min="2026-06-13">
                 </div>
                 <div class = "input_group" id="passenger-div">
                     <label for="Passengers">Passengers</label>
-                    <input type="number" id = "Passengers" name = "Passengers">
+                    <input type="number" id = "Passengers" name = "Passengers" min = "1" value ="1">
                 </div>
                 <button type = "search" class="search_button" id="search-btn">Search</button>
 
@@ -144,8 +145,16 @@
                 <p>Copyright &copy; 2026 Dumriya. All rights reserved.</p>
             </div>
     </footer>
+    <script>
+        var dateInput = document.getElementById('Date');
+        dateInput.valueAsDate = new Date();
+        dateInput.min = dateInput.value;
+
+    </script>
+
 
     <script src="js/main.js"></script>
+    
   
 </body>
 

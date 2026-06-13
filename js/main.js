@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkFadeElements();
     });
 
+<<<<<<< Updated upstream
     // Mobile Menu Toggle (Simplified placeholder)
     const mobileToggle = document.querySelector('.mobile-toggle');
     if (mobileToggle) {
@@ -120,4 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+=======
+    checkFadeElements();
+>>>>>>> Stashed changes
 });
