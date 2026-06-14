@@ -1,20 +1,9 @@
 :root {
-    --primary: #0284c7;
+    --primary: #0284c7; 
     --primary-dark: #0369a1;
-    --secondary: #f59e0b;
-    --secondary-hover: #d97706;
-    --dark: #0f172a;
-    --darker: #020617;
-    --light: #f8fafc;
-    --gray: #64748b;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-dark-bg: rgba(15, 23, 42, 0.7);
+    --dark: #0f172a; 
     --font-main: 'Inter', sans-serif;
-    --font-heading: 'Outfit', sans-serif;
     --transition: all 0.3s ease-in-out;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -28,7 +17,7 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-image: url('../assets/train-login.jpg');
+    background-image: url('../assets/train-login.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,9 +28,9 @@
     flex: 1.5;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end; 
     padding: 40px;
-    color: white;
+    color: white; 
 }
 
 .left-side h1 {
@@ -65,26 +54,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px;
-    background: linear-gradient(
-        90deg,
-        var(--primary-dark) 0%,
-        var(--dark) 100%
-    );
+    padding: 20px;
+    background: linear-gradient(90deg, var(--primary-dark) 0%, var(--dark) 100%);
 }
 
 .login-card {
     background-color: #ffffff;
     border-radius: 15px;      
-    padding: 40px;            
+    padding: 30px 40px;            
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 450px;
+    max-width: 450px; 
     width: 100%;
-    height: 100%;
+    height: auto; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 550px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -93,39 +76,60 @@
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
+.login-card h2 {
+    margin-bottom: 5px;
+}
+
 .subtitle {
     color: #6c757d;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
     font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
 }
 
 input[type="email"],
 input[type="password"],
 input[type="text"] {
     width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    margin-bottom: 18px;
+    padding: 10px; 
+    margin-bottom: 5px; 
     border: 1px solid #ccc;
     border-radius: 6px;
-    box-sizing: border-box;
 }
 
-i[id$="-error"] {
+.error-text, i[id$="-error"] {
     color: #d9534f;
-    font-size: 13px;
-    margin-top: -15px;
-    margin-bottom: 15px;
+    font-size: 12px;
+    min-height: 15px; 
     display: block;
     font-style: normal;
 }
 
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.checkbox-wrapper label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
 button[type="submit"] {
     width: 100%;
-    padding: 16px;
+    padding: 14px;
     background-color: #0284c7;
     color: white;
     border: none;
@@ -133,19 +137,19 @@ button[type="submit"] {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 10px;
     transition: background-color 0.2s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #004c99;
+    background-color: #004c99; 
 }
 
 .login-card a {
     color: #0066cc;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease; 
 }
 
 .login-card a:hover {
@@ -153,8 +157,8 @@ button[type="submit"]:hover {
 }
 
 .backHome {
-    margin-top: 15px;
     text-align: center;
+    font-size: 0.9rem;
 }
 
 .logo {
@@ -165,63 +169,10 @@ button[type="submit"]:hover {
     text-decoration: none;
 }
 
-.train-logo {
-    height: 100px;
-    width: auto;
-}
-
-.text-logo {
-    height: 90px;
-    width: auto;
-}
+.train-logo { height: 100px; width: auto; }
+.text-logo { height: 90px; width: auto; }
 
 #toast-container {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    position: fixed; top: 25px; right: 25px; z-index: 9999;
+    display: flex; flex-direction: column; gap: 15px;
 }
-
-.toast {
-    background-color: #ffffff;
-    color: #1f2937;
-    padding: 16px 24px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 15px;
-    font-weight: 600;
-    transform: translateX(150%);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.toast.show {
-    transform: translateX(0);
-}
-
-.toast.error {
-    border-left: 6px solid #ef4444;
-}
-
-.toast.success {
-    border-left: 6px solid #10b981;
-}
-
-.toast-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    color: white;
-    font-size: 12px;
-}
-
-.error-icon { background-color: #ef4444; }
-.success-icon { background-color: #10b981; }

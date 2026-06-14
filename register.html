@@ -8,56 +8,61 @@
 </head>
 <body>
     <div class="screen-container">
-       
+        
         <div class="left-side">
-            <a href="index.html" class="logo" id="logo-name" width="50px">
+            <a href="index.html" class="logo" id="logo-name">
                 <img src="assets/train-whit.png" alt="logo" class="train-logo">
                 <img src="assets/Dumriya_Icon-yellow.png" alt="Dumriya logo" class="text-logo">
             </a>
             <h1>Your Journey Across Sri Lanka Begins Here</h1>
             <p>Experience the most scenic rail routes, reserve seats instantly, and manage your bookings in one place.</p>
         </div>
-       
+        
         <div class="right-side">
             <div class="login-card">
                 <h2>Create Account</h2>
                 <p class="subtitle">Enter your details to create a new train ticketing account</p>
-               
+                
                 <form action="/">
-                    <label for="userName">Name</label><br>
-                    <input type="text" id="userName" name="userName" placeholder="Enter the name"><br>
-                   
-                    <label for="email">E-mail Address</label><br>
+                    <label for="userName">Name</label>
+                    <input type="text" id="userName" name="userName" placeholder="Enter the name">
+                    <i id="userName-error" class="error-text"></i>
+                    
+                    <label for="email">E-mail Address</label>
                     <input type="email" name="email" id="email" placeholder="example@gmail.com">
-                    <i id="email-error"></i><br>
-                   
-                    <label for="phoneNo">Phone Number</label><br>
+                    <i id="email-error" class="error-text"></i>
+                    
+                    <label for="phoneNo">Phone Number</label>
                     <input type="text" name="phoneNo" id="phoneNo" placeholder="07x xxx xxxx">
-                    <i id="phoneNo-error"></i><br>
-                   
-                    <label for="pass">Password</label><br>
+                    <i id="phoneNo-error" class="error-text"></i>
+                    
+                    <label for="pass">Password</label>
                     <input type="password" name="pass" id="pass" placeholder="New password">
-                    <i id="pass-error"></i><br>
-                   
-                    <label for="confirm">Confirm Password</label><br>
+                    <i id="pass-error" class="error-text"></i>
+                    
+                    <label for="confirm">Confirm Password</label>
                     <input type="password" name="confirm" id="confirm" placeholder="Re-enter the password">
-                    <i id="confirm-error"></i><br>
-                   
-                    <input type="checkbox" name="agreeBox" id="agreeBox">
-                    <label for="agreeBox">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label><br>
-                    <i id="condition-error"></i><br>
-                   
+                    <i id="confirm-error" class="error-text"></i>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="agreeBox" id="agreeBox">
+                        <label for="agreeBox">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <i id="condition-error" class="error-text"></i>
+                    
                     <button type="submit">Sign Up</button>
                 </form>
 
-                <p style="margin-top: 25px;">Already have an account? <a href="login.html">Sign In</a></p>
-                <p class="backHome"><a href="index.html">Back to Home</a></p>
+                <p class="backHome" style="margin-top: 15px;">Already have an account? <a href="login.html">Sign In</a></p>
+                <p class="backHome" style="margin-top: 5px;"><a href="index.html">Back to Home</a></p>
             </div>
         </div>
-       
+        
     </div>
 
-    <div id="toast-container"></div>
-    <script src="js/login.js"></script>
+    <div id="toast-container"></div> 
+    
+    <form id="login-form" style="display: none;"></form> 
+    <script src="js/login.js"></script> 
 </body>
 </html>
